@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="demo">
+  <h2>Let AJAX change this text</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc(){
+	$.ajax({
+  type: "POST",
+  url: "http://localhost:5000/handbag",
+  data: { url:"", model: "one_layer.h5"},
+  // success: success,
+  // dataType: dataType
+});
+	// $.post( "http://localhost:5000/handbag", { "url": "", "model": "one_layer.h5" } );
+}
+</script>
+
+</body>
+</html>
